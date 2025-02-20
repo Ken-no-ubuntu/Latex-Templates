@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath} % For mathematical equations
+\usepackage{amssymb} % For mathematical symbols
+\usepackage{geometry} % For adjusting page margins
+\geometry{a4paper, margin=1in} % Set A4 paper size and 1-inch margins
+
+% Title and author information
+\title{Question and Answer Submission}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}
+\maketitle % Display the title
+
+% Question Section
+\section*{Question}
+
+\textbf{List of the Questions for this Exercise}
+\begin{itemize}
+    \item 1. What is the domicile and the legal / regulatory structure of the manager (fund management
+company)?
+    \item 2. Describe Vega’s Master-Feeder structure:
+    \SubItem i. how many feeders?
+    \SubItem ii. Domicile and legal structure of each fund vehicle?
+    \SubItem iii. Terms of each fund vehicle (fees, liquidity, etc.)?
+    \SubItem iv. Inception date of each fund vehicle?
+
+    \item 3. USDJPY cost of hedging p.a.:
+\item 4. How does your computed cost of hedging compare to the actual USDJPY hedge cost (see
+FXHCUSJP on Bberg)?
+\item 5. Titanic Capital US Equity strategy makes 7% in USD. What’s the hedged return for a JPY investor?
+\item Titanic Capital Jp RE strategy makes 3% in JPY. What’s the hedged return for a USD investor?
+Re-do the whole set of questions above as of Jun 2015 – how much have your answers changed?
+\end{itemize}
+
+% Answer Section
+\section*{Answer}
+\begin{itemize}
+
+\item 1. Parameter	Assumed Value
+\SubItem USD 1m Rate	5.35%
+\SubItem JPY 1m Rate	-0.05%
+\SubItem USDJPY Basis Cost	-25 bps (-0.25%)
+\SubItem USDJPY Spot Rate Today	149.50
+
+\item 2. Compute USDJPY forward rates (assume flat yield curves) for …
+\SubItem o 1yr: 141.75
+\SubItem o 5yr: 116.50
+\SubItem o 10yr: 90.25
+\SubItem o 30yr: 45.00
+\footnote{IRP (Interest Rate Parity): spot_p((1+p1)/(1+p2))} 
+\item 3. 1yr: 141.75: −5.18%
+\footnote{Cost of Hedging= (F-S)/(S*t)}
+\item 4. on Bloomberg is -0,05 so its pretty accurate
+\item 5. 7-5.18= 1.82%
+\item 6. 3-(-5.18) = 8.18%
+\item 7. Parameter	Assumed Value
+\SubItem USD 1m Rate	0.25%
+\SubItem JPY 1m Rate	0.10%
+\SubItem USDJPY Basis Cost	-10 bps (-0.10%)
+\SubItem USDJPY Spot Rate Today	123.50
+
+\item 8. Compute USDJPY forward rates (assume flat yield curves) for …
+\SubItem o 1yr: 123.32
+\SubItem o 5yr: 122.8
+\SubItem o 10yr: 122.3
+\SubItem o 30yr: 120.5
+\item 9. 1yr: -0.15%
+\item 10. 7 \textminus 0.15=6.85%
+\item 11.  3 \textminus(\textminus 0.15)=3.15%
+
+\end{itemize}
+\end{document}
